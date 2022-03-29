@@ -1,4 +1,3 @@
-const { lowerUser } = require('../lib/lowerCase');
 const { generateToken } = require('../lib/generateToken');
 const { checkPW } = require('../lib/checkPW');
 const { encrypt } = require('../lib/hashing');
@@ -9,7 +8,6 @@ const init = async (req, res) => {
     username, password, name, balance,
   } = req.body;
 
-  const lowerCUS = lowerUser(username);
   const encryptedPassword = encrypt(password);
 
   try {
@@ -27,7 +25,7 @@ const init = async (req, res) => {
 
   try {
     const user = await User.findOne({
-      where: { username: lowerCUS },
+      where: { username },
     });
     if (user) {
       const result = {
