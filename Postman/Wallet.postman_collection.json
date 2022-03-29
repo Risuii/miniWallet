@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "d67a2c46-e4df-4d60-b7b8-d57fe4a785de",
+		"name": "Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base3000}}",
+					"host": [
+						"{{base3000}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"farisFahmi\",\n    \"password\": \"asd\",\n    \"name\": \"faris\",\n    \"balance\": 10000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/api/v1/init",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginData",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"risuii3\",\n    \"password\": \"asd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/api/v1/login",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnableWallet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJyaXN1aWkzIiwiaWF0IjoxNjQ4NDgzNTM1fQ.3ohOSrqLxR0kjyXiVaybDZ4kodDXMKJAAzRxsgHsyTE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/api/v1/wallet",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SeeWallet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJyaXN1aWkyIiwiaWF0IjoxNjQ4NDgyMTMzfQ.OFS-pVmTsvetrLS7OiSxdVbS8co0L1oaqrvheDxT8rc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base3000}}/api/v1/wallet",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJyaXN1aWkyIiwiaWF0IjoxNjQ4NDgyMTMzfQ.OFS-pVmTsvetrLS7OiSxdVbS8co0L1oaqrvheDxT8rc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"inputBalance\": 20000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/api/v1/wallet/deposits",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"wallet",
+						"deposits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuyItems",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJyaXN1aWkyIiwiaWF0IjoxNjQ4NDgyMTMzfQ.OFS-pVmTsvetrLS7OiSxdVbS8co0L1oaqrvheDxT8rc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": \"Cokelat\",\n    \"price\": 10000\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/api/v1/wallet/withdrawals",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"wallet",
+						"withdrawals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DisableWallet",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJyaXN1aWk0IiwiaWF0IjoxNjQ4NDg2OTU2fQ.lCl3EWy3UqH7lCa1VxNzmeW6Yb7-TQMNw220HnPikB8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base3000}}/api/v1/wallet",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
