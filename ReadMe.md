@@ -9,7 +9,7 @@ npm install
 ```
 2. Install config
 ```
-1. buka terminal di dalam folder julo
+1. buka terminal di dalam folder miniWallet
 2. didalam terminal masukan sequelize init
 3. lalu masukan sequelize db:create untuk membuat database
 4. dan masukan sequelize db:migrate untuk membuat tabel
